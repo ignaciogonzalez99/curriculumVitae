@@ -29,7 +29,9 @@ $requiredHtml = @(
   'ignacio.fing@gmail.com',
   'https://www.linkedin.com/in/ignacio-gonzalez1999/',
   'https://github.com/ignaciogonzalez99',
-  'Progreso, Canelones, Uruguay'
+  'Progreso, Canelones, Uruguay',
+  'Octubre 2022 - Presente',
+  'Programador · ST Consultores'
 )
 
 foreach ($needle in $requiredHtml) {
