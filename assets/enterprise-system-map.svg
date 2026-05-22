@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="460" viewBox="0 0 640 460" role="img" aria-labelledby="title desc">
+  <title id="title">Mapa visual de stack enterprise</title>
+  <desc id="desc">Diagrama con frontend React, backend Java, SQL, dashboards, testing y soporte productivo conectados alrededor de aplicaciones enterprise.</desc>
+  <rect width="640" height="460" rx="8" fill="#fffef9"/>
+  <path d="M72 362 C150 270 196 390 284 302 C374 212 430 300 564 184" fill="none" stroke="#d9dfd6" stroke-width="26" stroke-linecap="round"/>
+  <path d="M80 356 C154 278 206 374 290 292 C374 210 438 286 560 190" fill="none" stroke="#087d71" stroke-width="4" stroke-linecap="round"/>
+  <g fill="#f7f8f5" stroke="#171b18" stroke-width="2">
+    <rect x="44" y="54" width="178" height="86" rx="8"/>
+    <rect x="386" y="52" width="200" height="92" rx="8"/>
+    <rect x="224" y="186" width="196" height="94" rx="8"/>
+    <rect x="58" y="302" width="186" height="88" rx="8"/>
+    <rect x="410" y="310" width="174" height="88" rx="8"/>
+  </g>
+  <g font-family="Inter, Arial, sans-serif" fill="#171b18">
+    <text x="72" y="88" font-size="20" font-weight="800">Frontend</text>
+    <text x="72" y="116" font-size="15">React · TypeScript</text>
+    <text x="414" y="86" font-size="20" font-weight="800">Backend</text>
+    <text x="414" y="114" font-size="15">Java · Spring Boot</text>
+    <text x="256" y="222" font-size="20" font-weight="800">Enterprise Core</text>
+    <text x="256" y="250" font-size="15">Documentos · Workflow</text>
+    <text x="86" y="336" font-size="20" font-weight="800">SQL & Reporting</text>
+    <text x="86" y="364" font-size="15">PostgreSQL · SQL Server</text>
+    <text x="438" y="344" font-size="20" font-weight="800">Calidad</text>
+    <text x="438" y="372" font-size="15">Testing · SonarQube</text>
+  </g>
+  <g stroke="#245fbd" stroke-width="3" stroke-linecap="round">
+    <path d="M222 98 H318 V186"/>
+    <path d="M386 98 H322 V186"/>
+    <path d="M322 280 V326 H244"/>
+    <path d="M420 236 H498 V310"/>
+  </g>
+  <g>
+    <circle cx="322" cy="186" r="7" fill="#245fbd"/>
+    <circle cx="322" cy="280" r="7" fill="#245fbd"/>
+    <circle cx="244" cy="326" r="7" fill="#b86800"/>
+    <circle cx="498" cy="310" r="7" fill="#aa423d"/>
+  </g>
+  <g fill="#087d71">
+    <rect x="470" y="174" width="92" height="16" rx="8"/>
+    <rect x="470" y="198" width="64" height="16" rx="8"/>
+    <rect x="470" y="222" width="78" height="16" rx="8"/>
+  </g>
+  <g fill="#2f6d4d">
+    <circle cx="92" cy="210" r="10"/>
+    <circle cx="126" cy="210" r="10"/>
+    <circle cx="160" cy="210" r="10"/>
+  </g>
+  <text x="80" y="244" font-family="Inter, Arial, sans-serif" fill="#59635d" font-size="14">trazabilidad · integraciones · producción</text>
+</svg>

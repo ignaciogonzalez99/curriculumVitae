@@ -1,0 +1,614 @@
+:root {
+  --paper: #f7f8f5;
+  --surface: #fffef9;
+  --ink: #171b18;
+  --muted: #59635d;
+  --line: #d9dfd6;
+  --teal: #087d71;
+  --green: #2f6d4d;
+  --cobalt: #245fbd;
+  --amber: #b86800;
+  --red: #aa423d;
+  --shadow: 0 18px 45px rgba(23, 27, 24, 0.08);
+  --radius: 8px;
+  --space-1: 0.5rem;
+  --space-2: 0.75rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --space-5: 2rem;
+  --space-6: 3rem;
+  --space-7: 4.5rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid rgba(8, 125, 113, 0.35);
+  outline-offset: 4px;
+}
+
+.shell {
+  width: min(1120px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid rgba(217, 223, 214, 0.85);
+  background: rgba(247, 248, 245, 0.92);
+  backdrop-filter: blur(14px);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  min-height: 4.25rem;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: var(--space-1);
+}
+
+.nav-links a {
+  min-height: 2.5rem;
+  padding: 0.55rem 0.75rem;
+  border-radius: var(--radius);
+  color: var(--muted);
+  font-size: 0.95rem;
+  font-weight: 650;
+}
+
+.nav-links a:hover {
+  background: rgba(8, 125, 113, 0.08);
+  color: var(--ink);
+}
+
+.section,
+.section-band {
+  padding: var(--space-7) 0;
+}
+
+.hero {
+  border-bottom: 1px solid var(--line);
+  background:
+    linear-gradient(135deg, rgba(8, 125, 113, 0.08), transparent 34%),
+    linear-gradient(315deg, rgba(36, 95, 189, 0.09), transparent 36%),
+    var(--surface);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.02fr) minmax(320px, 0.78fr);
+  align-items: center;
+  gap: var(--space-6);
+}
+
+.eyebrow,
+.section-kicker {
+  margin: 0 0 var(--space-2);
+  color: var(--teal);
+  font-size: 0.9rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  max-width: 13ch;
+  margin-bottom: var(--space-4);
+  font-size: 3.35rem;
+  line-height: 1.05;
+}
+
+h2 {
+  margin-bottom: var(--space-3);
+  font-size: 2.1rem;
+  line-height: 1.18;
+}
+
+h3 {
+  margin-bottom: var(--space-2);
+  font-size: 1.1rem;
+  line-height: 1.25;
+}
+
+.lead {
+  max-width: 62ch;
+  color: var(--muted);
+  font-size: 1.16rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-5);
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.85rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--ink);
+  border-radius: var(--radius);
+  font-weight: 800;
+}
+
+.button.primary {
+  background: var(--ink);
+  color: var(--surface);
+}
+
+.button.primary:hover {
+  background: var(--teal);
+  border-color: var(--teal);
+}
+
+.button.secondary {
+  background: transparent;
+  color: var(--ink);
+}
+
+.button.secondary:hover {
+  border-color: var(--teal);
+  color: var(--teal);
+}
+
+.profile-card {
+  margin: 0;
+  padding: var(--space-4);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(255, 254, 249, 0.78);
+  box-shadow: var(--shadow);
+}
+
+.profile-photo {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.profile-card-body {
+  margin-top: var(--space-3);
+}
+
+.profile-name {
+  margin-bottom: 0.15rem;
+  color: var(--ink);
+  font-size: 1.18rem;
+  font-weight: 850;
+}
+
+.profile-card-body p:not(.profile-name) {
+  margin-bottom: var(--space-3);
+  color: var(--muted);
+}
+
+.quick-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.quick-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.3rem;
+  padding: 0.45rem 0.7rem;
+  border: 1px solid rgba(8, 125, 113, 0.22);
+  border-radius: var(--radius);
+  background: rgba(8, 125, 113, 0.08);
+  color: #174c45;
+  font-weight: 800;
+}
+
+.quick-links a:hover {
+  border-color: var(--teal);
+  background: rgba(8, 125, 113, 0.13);
+}
+
+.two-column {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.82fr) minmax(0, 1.18fr);
+  gap: var(--space-6);
+  align-items: start;
+}
+
+.rich-text p,
+.supporting,
+.contact-panel p {
+  color: var(--muted);
+}
+
+.rich-text p:last-child {
+  margin-bottom: 0;
+}
+
+.contrast {
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: #eef4ef;
+}
+
+.section-heading {
+  max-width: 760px;
+  margin-bottom: var(--space-5);
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-3);
+}
+
+.metric-card,
+.role-card,
+.experience-item,
+.skill-group {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.metric-card {
+  min-height: 10rem;
+  padding: var(--space-4);
+}
+
+.metric-card strong {
+  display: block;
+  margin-bottom: var(--space-2);
+  color: var(--ink);
+  font-size: 1.32rem;
+  line-height: 1.2;
+}
+
+.metric-card span {
+  display: block;
+  color: var(--muted);
+}
+
+.role-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-4);
+}
+
+.role-card,
+.skill-group {
+  padding: var(--space-4);
+}
+
+.clean-list {
+  display: grid;
+  gap: var(--space-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.clean-list li {
+  position: relative;
+  padding-left: 1.15rem;
+  color: var(--muted);
+}
+
+.clean-list li::before {
+  position: absolute;
+  left: 0;
+  color: var(--teal);
+  content: "•";
+}
+
+.split-band {
+  background:
+    linear-gradient(90deg, rgba(184, 104, 0, 0.08), transparent 30%),
+    var(--paper);
+}
+
+.experience-list {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.experience-item {
+  padding: var(--space-4);
+}
+
+.experience-item p {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+.experience-item:nth-child(1) {
+  border-left: 5px solid var(--teal);
+}
+
+.experience-item:nth-child(2) {
+  border-left: 5px solid var(--cobalt);
+}
+
+.experience-item:nth-child(3) {
+  border-left: 5px solid var(--amber);
+}
+
+.experience-item:nth-child(4) {
+  border-left: 5px solid var(--red);
+}
+
+.skills-layout {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.tag-list span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.25rem;
+  padding: 0.42rem 0.7rem;
+  border: 1px solid rgba(8, 125, 113, 0.22);
+  border-radius: var(--radius);
+  background: rgba(8, 125, 113, 0.08);
+  color: #174c45;
+  font-weight: 700;
+}
+
+.tag-list.accent span {
+  border-color: rgba(36, 95, 189, 0.2);
+  background: rgba(36, 95, 189, 0.08);
+  color: #1f4d96;
+}
+
+.quote-grid {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.78fr) minmax(0, 1.22fr);
+  gap: var(--space-6);
+  align-items: start;
+}
+
+blockquote {
+  margin: 0;
+  padding: var(--space-5);
+  border-left: 5px solid var(--teal);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  color: var(--ink);
+  font-size: 1.15rem;
+}
+
+.contact-panel {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.95fr) minmax(280px, 1.05fr);
+  gap: var(--space-5);
+  align-items: start;
+  padding: var(--space-5);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.contact-list {
+  display: grid;
+  gap: var(--space-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.contact-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  min-height: 3rem;
+  padding: 0.65rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.contact-list li:last-child {
+  border-bottom: 0;
+}
+
+.contact-list span {
+  color: var(--muted);
+}
+
+.contact-list a,
+.contact-list strong {
+  color: var(--ink);
+  font-weight: 800;
+  overflow-wrap: anywhere;
+  text-align: right;
+}
+
+.contact-list a:hover {
+  color: var(--teal);
+}
+
+@media (max-width: 1024px) {
+  h1 {
+    max-width: 14ch;
+    font-size: 2.75rem;
+  }
+
+  h2 {
+    font-size: 1.85rem;
+  }
+
+  .hero-grid,
+  .two-column,
+  .quote-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .metrics-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .section,
+  .section-band {
+    padding: var(--space-6) 0;
+  }
+
+  .nav {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: var(--space-2);
+    padding: var(--space-2) 0;
+  }
+
+  .nav-links {
+    justify-content: flex-start;
+  }
+
+  h1 {
+    font-size: 2.25rem;
+  }
+
+  h2 {
+    font-size: 1.65rem;
+  }
+
+  .role-grid,
+  .contact-panel {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .shell {
+    width: min(100% - 1rem, 1120px);
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  .profile-card,
+  .metric-card,
+  .role-card,
+  .experience-item,
+  .skill-group,
+  .contact-panel,
+  blockquote {
+    padding: var(--space-3);
+  }
+
+  .metrics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-list li {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+
+  .contact-list a,
+  .contact-list strong {
+    text-align: left;
+  }
+}
+
+@media print {
+  .site-header,
+  .hero-actions,
+  .quick-links {
+    display: none;
+  }
+
+  body {
+    background: #ffffff;
+    color: #111111;
+    font-size: 0.92rem;
+  }
+
+  .section,
+  .section-band {
+    padding: 1.2rem 0;
+  }
+
+  .shell {
+    width: 100%;
+  }
+
+  .metric-card,
+  .role-card,
+  .experience-item,
+  .skill-group,
+  .contact-panel,
+  blockquote {
+    box-shadow: none;
+    break-inside: avoid;
+  }
+}
