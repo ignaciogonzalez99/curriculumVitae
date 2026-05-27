@@ -24,7 +24,7 @@ $requiredHtml = @(
   'id="skills"',
   'id="contacto"',
   'profile-card',
-  'assets/profile-photo.jpeg',
+  'fotoPerfil.jpeg',
   'Full-Stack Enterprise Developer',
   'ignacio.fing@gmail.com',
   'https://www.linkedin.com/in/ignacio-gonzalez1999/',
@@ -64,7 +64,7 @@ $requiredCss = @(
 )
 
 $requiredFiles = @(
-  "assets/profile-photo.jpeg"
+  "fotoPerfil.jpeg"
 )
 
 foreach ($relativePath in $requiredFiles) {
